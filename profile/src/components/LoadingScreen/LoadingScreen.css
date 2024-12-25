@@ -1,0 +1,64 @@
+[data-char=O] {
+    --background-color: #ccc;
+    background: conic-gradient(#ccc0, #cccf);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    clip-path: url(#d);
+    -webkit-clip-path: url(#d);
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-bottom: -0.03em;
+    color: transparent;
+    overflow: hidden;
+
+    /* Rounded line */
+    &:before {
+        content: '';
+        display: block;
+        background: red;
+        position: relative;
+        border-radius: 0 100% 100% 0;
+        background: var(--background-color);
+        top: 0;
+        left: calc(50% - 1px);
+        width: .1em;
+        height: .1em;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg) translatez(0);
+    }
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+    color: #ccc;
+    background-color: #2c135f;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Center using flexbox */
+:root {
+    height: 100%;
+    display: flex
+}
+
+:root>* {
+    margin: auto
+}
+
+#LoadingScreen {
+    width:  100vw;
+    text-align: center;
+}
+

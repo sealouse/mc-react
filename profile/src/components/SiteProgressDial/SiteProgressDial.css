@@ -1,0 +1,63 @@
+/* SiteProgressDial.css */
+.site-progress-dial {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+.dial-container {
+    width: 50px;
+    height: 50px;
+}
+
+.dial {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+.dial-bg {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 5;
+}
+
+.dial-progress {
+    fill: none;
+    stroke: rgba(77, 91, 109, 0.8);
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease;
+}
+
+/* Button styling */
+.btn-top {
+    position: absolute; /* Overlay button on top of the circle */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Smaller than the dial */
+    height: 30px;
+    background: rgba(77, 91, 109, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10; /* Ensure it stays above the SVG */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-top:hover {
+    background: rgba(77, 91, 109, 1);
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
